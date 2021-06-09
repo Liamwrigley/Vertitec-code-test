@@ -32,8 +32,8 @@ namespace Veritec_Solution.Taxations
 
         public double CalculateSuperAnnuation(double grossPackage)
         {
-            double percentage = Constants.SuperAnnuationPercent / 100.00;
-            double super = grossPackage * percentage;
+            double percentage = Constants.SuperAnnuationPercent;
+            double super = (grossPackage / (100.00 + percentage)) * percentage;
             return super;
         }
     }
